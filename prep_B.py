@@ -9,13 +9,13 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-sql = "INSERT INTO Mammiferi (id ,Nome_Proprio, Razza, Peso, Eta ) VALUES (%s, %s, %s, %s, %s)"
+sql = "INSERT INTO Mammiferi (Nome_Proprio, Razza, Peso, Eta ) VALUES (%s, %s, %s, %s)"
 val = [
-  (1, 'Leo', 'Labrador Retriever', 30, 5),
-  (2, 'Miao', 'Siamese', 4, 3),
-  (3, 'Max', 'Pastore Tedesco', 35, 7),
-  (4, 'Bella', 'Golden Retriever', 28, 4),
-  (5, 'Piuma', 'Coniglio Nano', 1.5, 2),
+  ('Leo', 'Labrador Retriever', 30, 5),
+  ('Miao', 'Siamese', 4, 3),
+  ('Max', 'Pastore Tedesco', 35, 7),
+  ('Bella', 'Golden Retriever', 28, 4),
+  ('Piuma', 'Coniglio Nano', 1.5, 2),
 ]
 
 mycursor.executemany(sql, val)
