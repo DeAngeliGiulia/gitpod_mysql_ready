@@ -1,17 +1,19 @@
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="",
-  database="Animali"
-)
+def get_Mammiferi():
+  mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="Animali"
+  )
 
-mycursor = mydb.cursor()
+  mycursor = mydb.cursor()
 
-mycursor.execute("SELECT * FROM Mammiferi")
+  mycursor.execute("SELECT * FROM Mammiferi")
 
-myresult = mycursor.fetchall()
+  myresult = mycursor.fetchall()
+  for x in myresult:
+    print(x)
 
-for x in myresult:
-  print(x)
+#get_Mammiferi()

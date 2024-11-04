@@ -1,3 +1,4 @@
+"""
 import mysql.connector
 import prep_C
 
@@ -12,7 +13,7 @@ mycursor = mydb.cursor()
 
 animali = []
 
-for i in range(5):
+for i in range input('inserisci il numero di animali da inserire'):
     Nome_Proprio = input("Inserisci il nome dell'animale: ")
     Razza = input("Inserisci la razza dell'animale: ")
     Peso = float(input("Inserisci il peso (in kg) dell'animale: "))
@@ -27,3 +28,5 @@ mydb.commit()
 print(mycursor.rowcount, "Animali inseriti.")
 if i == 5:
   prep_C.get_Mammiferi
+"""
+
